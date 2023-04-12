@@ -52,10 +52,15 @@ const AppProvider = ({ children }) => {
     setLoading(false);
   };
 
-  //SOlo para el boton de surprise ME! de serach component
+  //SOlo para el boton de surprise ME! de search component
   const fetchRandomMeal =() =>{
     fetchMeals(randomMealUrl)
   }
+
+  const fetchMealsHome = () => {
+    fetchMeals(allMealsUrl)
+  }
+
 
   const selectMeal = (idMeal, favoriteMeal) =>{
     let meal;
@@ -101,7 +106,7 @@ const AppProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <AppContext.Provider value={{ loading, meals, setSearchTerm, fetchRandomMeal, showModal, selectedMeal, selectMeal, closeModal, addToFavorites,removeFromFavorites , favorites }}>
+    <AppContext.Provider value={{ loading, meals, setSearchTerm, fetchRandomMeal,fetchMealsHome, showModal, selectedMeal, selectMeal, closeModal, addToFavorites,removeFromFavorites , favorites }}>
       {children}
     </AppContext.Provider>
   );

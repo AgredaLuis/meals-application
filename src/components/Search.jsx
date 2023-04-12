@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const Search = () => {
   const [text, setText] = useState("");
-  const { setSearchTerm, fetchRandomMeal } = useGlobalContext();
+  const { setSearchTerm, fetchRandomMeal, fetchMealsHome } = useGlobalContext();
 
   const handlechange = (e) => {
     setText(e.target.value);
@@ -22,9 +22,18 @@ const Search = () => {
     fetchRandomMeal("");
   };
 
+  const handleHome = () => {
+    setText("");
+    setSearchTerm("");
+    fetchMealsHome();
+  };
+
   return (
     <header className="search-container">
       <form onSubmit={handleSubmit}>
+        <button className="btn " type="button" onClick={handleHome}>
+          Home
+        </button>
         <input
           onChange={handlechange}
           value={text}
