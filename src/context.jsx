@@ -20,7 +20,7 @@ const getFavoritesFromLocalStorage = () =>{
 }
 
 
-
+//Todo lo que context proveera a los demas componentes
 const AppProvider = ({ children }) => {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -52,6 +52,7 @@ const AppProvider = ({ children }) => {
     setLoading(false);
   };
 
+  //SOlo para el boton de surprise ME! de serach component
   const fetchRandomMeal =() =>{
     fetchMeals(randomMealUrl)
   }
@@ -68,6 +69,7 @@ const AppProvider = ({ children }) => {
     setShowModal(true)
   }
 
+  
   const closeModal = () =>{
     setShowModal(false)
   }
