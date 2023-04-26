@@ -8,7 +8,9 @@ App usando Vite + React enfasis en el uso de hooks de useState, useEffect y useC
 ## _Meals Application_
 
 
-This site was built using [GitHub Pages](https://github.com/AgredaLuis/meals-application/blob/main/public/meals-application-image.png).
+This site was built using [GitHub Pages].
+
+![Imagen de la parte contact de la pagina.](https://github.com/AgredaLuis/meals-application/blob/main/public/meals-application-image.png)
 
 ## Features
 
